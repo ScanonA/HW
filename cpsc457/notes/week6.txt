@@ -1,0 +1,20 @@
+in the write_file.c the reason that when you hit cntr+c the buffer for print isnt full so it doesnt write them down onto the output file 
+
+SIGKILL and SIGSTOP cannot be handled or ignored 
+
+ctrlc_write_file.c :
+
+if you register SIGKILL to handle it in the code the code will still say killed becuase you can't handle it 
+
+alarm.c :
+
+void signal_handler(int signal);
+
+
+asg3:
+q5 - 
+	multithreading program do not forget to check the output 
+	doesnt matter how fast your program is
+	if the program output is wrong you will get 0
+	carefull with the name of the files 
+	
