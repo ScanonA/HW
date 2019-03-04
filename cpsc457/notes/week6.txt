@@ -17,4 +17,4 @@ q5 -
 	doesnt matter how fast your program is
 	if the program output is wrong you will get 0
 	carefull with the name of the files 
-	
+	be carefull with the loop legnth becuase the multiple may be so close to the actuall number that 	it could come up as prime 	
