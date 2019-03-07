@@ -16,6 +16,9 @@ int64_t num[MAX_SIZE];
 int nThreads = 1;
 int nTotal;
 pthread_mutex_t mutex;
+pthread_mutex_t mutex2;
+pthread_mutex_t mutex3;
+int l = 0;
 
 /// primality test, if n is prime, return 1, else return 0
 int isPrime(int64_t n)
@@ -33,37 +36,54 @@ int isPrime(int64_t n)
 }
 
 void * thread_sum(void * tid) {
-    int start, end, lastPart;
-    float div = nTotal / nThreads;
-    int part = ceil(div);
-    int remaining = part * nThreads;
-    int threadSum = 0;
-    long int itid = (long int) tid;
+ 
+  int div = floor(nTotal/nThreads);
 
-    if((remaining - count) == 0)
-        lastPart = part;
-    else
-        lastPart = remaining - count;
+  long int itid= (long int) tid;
+  printf("itid: %ld\n", itid);
 
-    if( itid == (nThreads - 1)) {
-        start = (itid * part);
-        end = start + part - lastPart;
-    }
-    else {
-        start = itid * part;
-        end = start + part;
-    }
+  int firstgroup_partition=(nTotal%nThreads);
+  int secondgroup_partition=(nThreads-nTotal%nThreads);
 
-    for (int i = start; i < end; i++) {
-        if(isPrime(num[i])) {
-          printf("num: %ld\n", num[i]);
-          pthread_mutex_lock(&mutex);
+pthread_mutex_lock(&mutex);
+if(itid<firstgroup_partition){
+  //pthread_mutex_lock(&mutex);
+  for(int i=0;i<div+1;i++) {
+  	//pthread_mutex_unlock(&mutex);
+    printf("%ld\n", num[l]);
+    if(isPrime(num[l])==1) {
+          printf("num firstgroup_partition: %ld\n", num[l]);
+          //pthread_mutex_lock(&mutex3);
           count++;
-          pthread_mutex_unlock(&mutex);
-        }
-    }
+          //pthread_mutex_unlock(&mutex3);
+     }
+     //pthread_mutex_lock(&mutex3);
+     l++;
+     //pthread_mutex_unlock(&mutex3);
+   }
+   //pthread_mutex_unlock(&mutex);
+}
 
-    pthread_exit(0);
+
+ else {
+ 	//pthread_mutex_lock(&mutex2);
+   for(int i=0;i<div;i++) {
+   	//pthread_mutex_unlock(&mutex2);
+   	//printf("%ld\n", num[l]);
+     if(isPrime(num[l])==1) {
+          printf("num secondgroup_partition: %ld\n", num[l]);
+          //pthread_mutex_lock(&mutex3);
+          count++;
+          //pthread_mutex_unlock(&mutex3);
+     }
+    //pthread_mutex_lock(&mutex3);
+     l++;
+     //pthread_mutex_unlock(&mutex3);
+   }
+   //pthread_mutex_unlock(&mutex2);
+}
+pthread_mutex_unlock(&mutex);
+pthread_exit(0);
 }
 
 int main( int argc, char ** argv)
@@ -97,12 +117,19 @@ int main( int argc, char ** argv)
       nTotal++;
     }
 
+    /*for(int i=0; i<nTotal;i++) {
+    	printf("num list: %ld\n", num[i]);
+    }*/
+
     for(i=0; i<nThreads; i++) {
       status = pthread_create(&threads[i], NULL, thread_sum, (void *) i);
       if(status != 0) {
         printf("Error in pthread_create\n");
           exit(-1);
         }
+    }
+    for(i=0; i<nThreads; i++) {
+      pthread_join(threads[i], NULL);
     }
 
     /// report results
