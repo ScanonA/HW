@@ -114,18 +114,8 @@ int main( int argc, char ** argv) {
 				//printf("else\n");
 				int64_t temp, temp_2;
 				crit =new data[nThreads];
-				/*temp = round(sqrt(num) - float(5));
+				temp = round(sqrt(num) - float(5));
 				int64_t T = round((double)temp / (double)6);
-				*/
-
-				float a = (sqrt(num))- float(5);
-		    int64_t n = nearbyint(a);
-		    double b = (double)n / (double) 6;
-		    //printf("%f\n", b);
-		    int64_t T= nearbyint(b);
-
-				printf("T: %ld\n", T);
-
 				int64_t f_Partition = T%nThreads;
 				temp = (T/nThreads) + 1;
 				temp_2 = T/nThreads;
