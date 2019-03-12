@@ -1,3 +1,21 @@
+/*
+############################################################
+# First Name: Steven
+# Last Name: Canon-Almagro
+# Student ID: 10155792
+# Course: CPSC457
+# Tutorial: TUT04
+# Assigment: 3
+# Question: 7
+# File Name: count.pp
+############################################################
+*/
+/// ouputs a processes using rr scheduler or sjf scheduler
+///
+/// compile with:
+///   $ g++ scheduler.cpp -o scheduler
+///
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -148,7 +166,7 @@ void sjf(int total, int total_burst) {
   for(int l=0; l<total; l++) {
   	avg_wait += (float)data[l].wait;
   }
-  avg_wait = avg_wait/total; 
+  avg_wait = avg_wait/total;
   printf("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
   for (int l = 0; l < total; l++) {
   	printf("P%d   waited %.3f sec.\n", l, (float)data[l].wait);
@@ -198,7 +216,7 @@ void rr(int time_slice, int total, int total_burst) {
       else if(data[l].status == 1) data[l].symbol = (char *)"+";
       else if(data[l].status == 2) data[l].symbol = (char *)".";
     }
-    
+
     int quantum=0;
     while(quantum < time_slice) {
       printf("%d\t", i);
@@ -234,7 +252,7 @@ void rr(int time_slice, int total, int total_burst) {
   for(int l=0; l<total; l++) {
   	avg_wait += (float)data[l].wait;
   }
-  avg_wait = avg_wait/total; 
+  avg_wait = avg_wait/total;
   printf("\n------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
   for (int l = 0; l < total; l++) {
   	printf("P%d   waited %.3f sec.\n", l, (float)data[l].wait);
@@ -332,7 +350,7 @@ int main(int argc, char ** argv) {
     printf("%d\n", data[l].status);
   }
 */
-  
+
  if(scheduling_type == 1) sjf(total, total_burst);
  else if(scheduling_type == 2) rr(t_quantum, total, total_burst);
 

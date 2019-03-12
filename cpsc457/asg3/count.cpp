@@ -1,7 +1,19 @@
+/*
+############################################################
+# First Name: Steven
+# Last Name: Canon-Almagro
+# Student ID: 10155792
+# Course: CPSC457
+# Tutorial: TUT04
+# Assigment: 3
+# Question: 5
+# File Name: count.pp
+############################################################
+*/
 /// counts number of primes from standard input
 ///
 /// compile with:
-///   $ gcc findPrimes.c -O2 -o count -lm
+///   $ g++ count.cpp -O2 -o count -lm -lpthread
 ///
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,17 +51,17 @@ void isPrime_post(int64_t n, int64_t i, int64_t max) {
 
   while( i <= max) {
       if (n % i == 0 || n % (i+2) == 0) {
-				prime_flag = 0;
+				prime_flag = 0; //if number is prime
 				return;
 			}
       i += 6;
   }
-  return;
+  return; //returns here if number can't be proved to be not prime
 }
 
 void *findPrime(void * d) {
 	data *crit = (data*) d;
-	isPrime_post(crit->n, crit->i, crit->max);
+	isPrime_post(crit->n, crit->i, crit->max); //going to loop to check if number is not prime
 	pthread_exit(0);
 }
 
@@ -80,23 +92,22 @@ int main( int argc, char ** argv) {
     int64_t num_list[MAX_SIZE];
     int nTotal = 0;
     while(1) {
-      if(1 != scanf("%ld", & num_list[nTotal])) break;
+      if(1 != scanf("%ld", & num_list[nTotal])) break; //puts input from commans line or text file into a list of numbers
       nTotal++;
     }
 
 /////////////calculating prime///////////////////////////////////////////////////////////////////////
     for(int n=0; n<nTotal; n++) {
 
-			int64_t num = num_list[n];
+			int64_t num = num_list[n]; //taking one number
 
-      if(sqrt(num)<=5 || nThreads>(sqrt(num))-5) {
+      if(sqrt(num)<=5 || nThreads+5>(sqrt(num))-5) {  //is number is low and partitioning its square wouldn't improve execution time then it goes sttaight to original method to find if prime or not
 					 if(isPrime_initial(num)) count++;
-
 				}else {
 				int64_t first, second;
 
 				crit =new data[nThreads];
-
+//getting initial values for partitioning the number and giving it to each thread
 				float temp = sqrt(num) - float(5);
 				int64_t temp_2 = nearbyint(temp);
 				double temp_3 = (double)temp_2 / (double)6;
@@ -107,7 +118,7 @@ int main( int argc, char ** argv) {
 				second = T/nThreads;
 				int64_t i = 5;
 				int64_t max;
-
+//getting i and max which are the start and end of each partition
 				if(f_Partition != 0) {
 					max = (first*6)-1;
 				}else {
@@ -128,7 +139,7 @@ int main( int argc, char ** argv) {
 				}
 
 				if (max!= (second*6)-1) {
-						max = i + (second*6) +12;
+						max = i + (second*6) +(6+6);
 				}
 
 				for(int64_t l=f_Partition; l<nThreads; l++) {
@@ -142,7 +153,7 @@ int main( int argc, char ** argv) {
 					}
 					max = second*6 + i;
 				}
-
+//creating threads with the data of each partition passed as argument
 				for(int l=0; l<nThreads; l++) {
 	           long status = pthread_create(&threads[l], NULL, findPrime, (void *) &crit[l]);
 	           if(status != 0) {
