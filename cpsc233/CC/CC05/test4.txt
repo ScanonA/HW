@@ -1,0 +1,4 @@
+This is a test
+for counting this word
+and here and there is a few tests
+and another test
