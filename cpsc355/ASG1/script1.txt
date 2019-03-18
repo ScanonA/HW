@@ -1,0 +1,222 @@
+Script started on 2018-05-26 03:30:00-0600
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ gcc assign1a.s -o asga
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ gdb asga
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from asga...(no debugging symbols found)...done.
+(gdb) break main
+Breakpoint 1 at 0x4005f4
+(gdb) break loop
+Breakpoint 2 at 0x400610
+(gdb) break print
+Breakpoint 3 at 0x400668
+(gdb) rn[K
+Starting program: /home/uga/steven.canonalmagro/CPSC355/asga 
+
+Breakpoint 1, 0x00000000004005f4 in main ()
+(gdb) display/i $pc
+1: x/i $pc
+=> 0x4005f4 <main+8>:	mov	x19, #0xfffffffffffffffc    	// #-4
+(gdb) 
+(gdb) ni
+0x00000000004005f8 in main ()
+1: x/i $pc
+=> 0x4005f8 <main+12>:	mov	x28, #0xffffffffffffd8f0    	// #-10000
+(gdb) 
+0x00000000004005fc in main ()
+1: x/i $pc
+=> 0x4005fc <main+16>:	mov	x23, #0x14                  	// #20
+(gdb) p $x18[K9
+$1 = -4
+(gdb) p $x19[K[K28
+$2 = -10000
+(gdb) ni
+0x0000000000400600 in main ()
+1: x/i $pc
+=> 0x400600 <main+20>:	mov	x24, #0xfffffffffffffff6    	// #-10
+(gdb) c
+Continuing.
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) ni
+0x0000000000400614 in loop ()
+1: x/i $pc
+=> 0x400614 <loop+4>:	b.gt	0x400674 <exit>
+(gdb) 
+0x0000000000400618 in loop ()
+1: x/i $pc
+=> 0x400618 <loop+8>:	mul	x20, x19, x23
+(gdb) 
+0x000000000040061c in loop ()
+1: x/i $pc
+=> 0x40061c <loop+12>:	mul	x21, x19, x19
+(gdb) p $x20
+$3 = -80
+(gdb) ni
+0x0000000000400620 in loop ()
+1: x/i $pc
+=> 0x400620 <loop+16>:	mul	x21, x21, x25
+(gdb) 
+0x0000000000400624 in loop ()
+1: x/i $pc
+=> 0x400624 <loop+20>:	mul	x22, x19, x19
+(gdb) p $x21
+$4 = 192
+(gdb) ni
+0x0000000000400628 in loop ()
+1: x/i $pc
+=> 0x400628 <loop+24>:	mul	x22, x22, x19
+(gdb) 
+0x000000000040062c in loop ()
+1: x/i $pc
+=> 0x40062c <loop+28>:	mul	x22, x22, x26
+(gdb) 
+0x0000000000400630 in loop ()
+1: x/i $pc
+=> 0x400630 <loop+32>:	mul	x22, x22, x27
+(gdb) p $x22
+$5 = -320
+(gdb) ni
+0x0000000000400634 in loop ()
+1: x/i $pc
+=> 0x400634 <loop+36>:	add	x22, x22, x21
+(gdb) 
+0x0000000000400638 in loop ()
+1: x/i $pc
+=> 0x400638 <loop+40>:	add	x20, x22, x20
+(gdb) 
+0x000000000040063c in loop ()
+1: x/i $pc
+=> 0x40063c <loop+44>:	add	x20, x20, x24
+(gdb) 
+0x0000000000400640 in loop ()
+1: x/i $pc
+=> 0x400640 <loop+48>:	mul	x20, x27, x20
+(gdb) 
+0x0000000000400644 in loop ()
+1: x/i $pc
+=> 0x400644 <loop+52>:	cmp	x28, x20
+(gdb) 
+0x0000000000400648 in loop ()
+1: x/i $pc
+=> 0x400648 <loop+56>:	b.gt	0x400654 <print>
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) ni
+the value of x is -4, the value of y is -422 and the current max is -422
+0x000000000040066c in print ()
+1: x/i $pc
+=> 0x40066c <print+24>:	add	x19, x19, #0x1
+(gdb) 
+0x0000000000400670 in print ()
+1: x/i $pc
+=> 0x400670 <print+28>:	b	0x400610 <loop>
+(gdb) 
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) p $x19
+$6 = -3
+(gdb) p $x20
+$7 = -422
+(gdb) p$[K $x28
+$8 = -422
+(gdb) r[Kc
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) c
+Continuing.
+the value of x is -3, the value of y is -173 and the current max is -173
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) c
+Continuing.
+the value of x is -2, the value of y is -38 and the current max is -38
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) p $x19
+$9 = -1
+(gdb) p $x20
+$10 = -38
+(gdb) p $x28
+$11 = -38
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) 
+Continuing.
+the value of x is -1, the value of y is 13 and the current max is 13
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) 
+Continuing.
+the value of x is 0, the value of y is 10 and the current max is 13
+
+Breakpoint 2, 0x0000000000400610 in loop ()
+1: x/i $pc
+=> 0x400610 <loop>:	cmp	x19, #0x3
+(gdb) 
+Continuing.
+
+Breakpoint 3, 0x0000000000400668 in print ()
+1: x/i $pc
+=> 0x400668 <print+20>:	bl	0x400490 <printf@plt>
+(gdb) p [K[Kcp $x28[K[K19
+$12 = 1
+(gdb) p $x19c[Kp $x280
+$13 = -17
+(gdb) p $x2019c[Kp $x28
+$14 = 13
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 27595] will be killed.
+
+Quit anyway? (y or n) y
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ quit[K[K[K[Kexity[K
+exit
+
+Script done on 2018-05-26 03:35:57-0600

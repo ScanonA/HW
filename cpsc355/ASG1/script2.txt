@@ -1,0 +1,46 @@
+Script started on 2018-05-26 03:08:10-0600
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ vim assign1b.m[8P./asgbgcc assign1b.s -o asgbm4 assign1b.m > assign1b.s[12Pvim assign1b.mm4 assign1b.m > assign1b.s[12Pvim assign1b.mm4 assign1b.m > assign1b.s[4Pgcc assign1b.s -o asgbm4 assign1b.m > assign1b.s[12Pvim assign1b.m[8P./asgb asgb[1Pasgbvim assign1b.mm4 assign1b.m > assign1b.s[4Pgcc assign1b.s -o asgb./asgb[Kvim assign1b.m[Kvim assign1b.m[8P./asgbgcc assign1b.s -o asgbm4 assign1b.m > assign1b.s[12Pvim assign1b.m[8P./asgb asgb[15@gcc assign1b.s -o[C[C[C[C[Cm4 assign1b.m > assign1b.s[12Pvim assign1b.msmgcc assign1b.s -o asgb[2P[C[C[C[C[C[C[C[C[C[Cm4 assign1b.m > assign1b.s[12Pvim assign1b.m[4Pcd CPSC355vim assign1b.mm4 assign1b.m > assign1b.s
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ m4 assign1b.m > assign1b.s[12Pvim assign1b.m[8P./asgbgcc assign1b.s -o asgb
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ gdb asgb
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from asgb...(no debugging symbols found)...done.
+(gdb) b exit
+Breakpoint 1 at 0x400674
+(gdb) r
+Starting program: /home/uga/steven.canonalmagro/CPSC355/asgb 
+the value of x is -4 the value of y is -422 and the current max is -422
+the value of x is -3 the value of y is -173 and the current max is -173
+the value of x is -2 the value of y is -38 and the current max is -38
+the value of x is -1 the value of y is 13 and the current max is 13
+the value of x is 0 the value of y is 10 and the current max is 13
+the value of x is 1 the value of y is -17 and the current max is 13
+the value of x is 2 the value of y is -38 and the current max is 13
+the value of x is 3 the value of y is -23 and the current max is 13
+
+Breakpoint 1, __GI_exit (status=68) at exit.c:104
+104	{
+(gdb) p $x28
+$1 = 13
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 27071] will be killed.
+
+Quit anyway? (y or n) y
+]0;steven.canonalmagro@csa2:~/CPSC355steven.canonalmagro@csa2:~/CPSC355$ exit
+exit
+
+Script done on 2018-05-26 03:09:22-0600

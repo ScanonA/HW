@@ -1,0 +1,464 @@
+Script started on 2018-06-15 01:30:22-0600
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG4steven.canonalmagro@csa2:~/CPSC355/ASG4$ vim assign3.m[6Pcd ASG3CPSC355[5P./asggcc asg.s -o asgm4 assign4.m > asg.s./asg[Km4 assign4.m > asg.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG4steven.canonalmagro@csa2:~/CPSC355/ASG4$ m4 assign4.m > asg.s[7Pvim assign3.m[6Pcd ASG3CPSC355[5P./asggcc asg.s -o asg
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG4steven.canonalmagro@csa2:~/CPSC355/ASG4$ gcc asg.s -o asgm4 assign4.m > asg.s[7Pvim assign3.m[6Pcd ASG3CPSC355[5P./asggcc asg.s -o asgm4 assign4.m > asg.s./asg[Kgcc asg.s -o asg./asg[Km4 assign4.m > asg.s[4Pgcc asg.s -o asg./asg[Kcd CPSC355[3PASG3vim assign3.mm4 assign4.m > asg.s[4Pgcc asg.s -o asg[Kd[Kgdb asg
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from asg...(no debugging symbols found)...done.
+(gdb) b main [K
+Breakpoint 1 at 0x40078c
+(gdb) b newbox
+Breakpoint 2 at 0x400638
+(gdb) equalbequal equal
+Breakpoint 3 at 0x400728
+(gdb) b main [K_2
+Breakpoint 4 at 0x4007c4
+(gdb) b expand
+Breakpoint 5 at 0x4006c0
+(gdb) r
+Starting program: /home/uga/steven.canonalmagro/CPSC355/ASG4/asg 
+
+Breakpoint 1, 0x000000000040078c in main ()
+(gdb) display/i $pc
+1: x/i $pc
+=> 0x40078c <main+8>:	ldr	x0, 0x400830 <else+32>
+(gdb) ni
+0x0000000000400790 in main ()
+1: x/i $pc
+=> 0x400790 <main+12>:	bl	0x400490 <printf@plt>
+(gdb) 
+initial box values: 
+0x0000000000400794 in main ()
+1: x/i $pc
+=> 0x400794 <main+16>:	add	x8, x29, #0x10
+(gdb) 
+0x0000000000400798 in main ()
+1: x/i $pc
+=> 0x400798 <main+20>:	bl	0x400628 <newbox>
+(gdb) 
+
+Breakpoint 2, 0x0000000000400638 in newbox ()
+1: x/i $pc
+=> 0x400638 <newbox+16>:	str	x12, [x29, #24]
+(gdb) 
+0x000000000040063c in newbox ()
+1: x/i $pc
+=> 0x40063c <newbox+20>:	stur	x12, [x29, #28]
+(gdb) 
+0x0000000000400640 in newbox ()
+1: x/i $pc
+=> 0x400640 <newbox+24>:	str	x11, [x29, #32]
+(gdb) 
+0x0000000000400644 in newbox ()
+1: x/i $pc
+=> 0x400644 <newbox+28>:	stur	x11, [x29, #36]
+(gdb) 
+0x0000000000400648 in newbox ()
+1: x/i $pc
+=> 0x400648 <newbox+32>:	ldr	x9, [x29, #32]
+(gdb) 
+0x000000000040064c in newbox ()
+1: x/i $pc
+=> 0x40064c <newbox+36>:	ldur	x10, [x29, #36]
+(gdb) 
+0x0000000000400650 in newbox ()
+1: x/i $pc
+=> 0x400650 <newbox+40>:	mul	x9, x9, x10
+(gdb) 
+0x0000000000400654 in newbox ()
+1: x/i $pc
+=> 0x400654 <newbox+44>:	str	x9, [x29, #16]
+(gdb) 
+0x0000000000400658 in newbox ()
+1: x/i $pc
+=> 0x400658 <newbox+48>:	ldr	x9, [x29, #24]
+(gdb) 
+0x000000000040065c in newbox ()
+1: x/i $pc
+=> 0x40065c <newbox+52>:	str	x9, [x8, #8]
+(gdb) 
+0x0000000000400660 in newbox ()
+1: x/i $pc
+=> 0x400660 <newbox+56>:	ldur	x9, [x29, #28]
+(gdb) 
+0x0000000000400664 in newbox ()
+1: x/i $pc
+=> 0x400664 <newbox+60>:	stur	x9, [x8, #12]
+(gdb) 
+0x0000000000400668 in newbox ()
+1: x/i $pc
+=> 0x400668 <newbox+64>:	ldr	x9, [x29, #32]
+(gdb) 
+0x000000000040066c in newbox ()
+1: x/i $pc
+=> 0x40066c <newbox+68>:	str	x9, [x8, #16]
+(gdb) 
+0x0000000000400670 in newbox ()
+1: x/i $pc
+=> 0x400670 <newbox+72>:	ldur	x9, [x29, #36]
+(gdb) 
+0x0000000000400674 in newbox ()
+1: x/i $pc
+=> 0x400674 <newbox+76>:	stur	x9, [x8, #20]
+(gdb) 
+0x0000000000400678 in newbox ()
+1: x/i $pc
+=> 0x400678 <newbox+80>:	ldr	x9, [x29, #16]
+(gdb) 
+0x000000000040067c in newbox ()
+1: x/i $pc
+=> 0x40067c <newbox+84>:	str	x9, [x8]
+(gdb) 
+0x0000000000400680 in newbox ()
+1: x/i $pc
+=> 0x400680 <newbox+88>:	ldp	x29, x30, [sp], #48
+(gdb) 
+0x0000000000400684 in newbox ()
+1: x/i $pc
+=> 0x400684 <newbox+92>:	ret
+(gdb) 
+0x000000000040079c in main ()
+1: x/i $pc
+=> 0x40079c <main+24>:	add	x8, x29, #0x28
+(gdb) 
+0x00000000004007a0 in main ()
+1: x/i $pc
+=> 0x4007a0 <main+28>:	bl	0x400628 <newbox>
+(gdb) 
+
+Breakpoint 2, 0x0000000000400638 in newbox ()
+1: x/i $pc
+=> 0x400638 <newbox+16>:	str	x12, [x29, #24]
+(gdb) 
+0x000000000040063c in newbox ()
+1: x/i $pc
+=> 0x40063c <newbox+20>:	stur	x12, [x29, #28]
+(gdb) 
+0x0000000000400640 in newbox ()
+1: x/i $pc
+=> 0x400640 <newbox+24>:	str	x11, [x29, #32]
+(gdb) 
+0x0000000000400644 in newbox ()
+1: x/i $pc
+=> 0x400644 <newbox+28>:	stur	x11, [x29, #36]
+(gdb) 
+0x0000000000400648 in newbox ()
+1: x/i $pc
+=> 0x400648 <newbox+32>:	ldr	x9, [x29, #32]
+(gdb) 
+0x000000000040064c in newbox ()
+1: x/i $pc
+=> 0x40064c <newbox+36>:	ldur	x10, [x29, #36]
+(gdb) 
+0x0000000000400650 in newbox ()
+1: x/i $pc
+=> 0x400650 <newbox+40>:	mul	x9, x9, x10
+(gdb) 
+0x0000000000400654 in newbox ()
+1: x/i $pc
+=> 0x400654 <newbox+44>:	str	x9, [x29, #16]
+(gdb) 
+0x0000000000400658 in newbox ()
+1: x/i $pc
+=> 0x400658 <newbox+48>:	ldr	x9, [x29, #24]
+(gdb) 
+0x000000000040065c in newbox ()
+1: x/i $pc
+=> 0x40065c <newbox+52>:	str	x9, [x8, #8]
+(gdb) 
+0x0000000000400660 in newbox ()
+1: x/i $pc
+=> 0x400660 <newbox+56>:	ldur	x9, [x29, #28]
+(gdb) 
+0x0000000000400664 in newbox ()
+1: x/i $pc
+=> 0x400664 <newbox+60>:	stur	x9, [x8, #12]
+(gdb) 
+0x0000000000400668 in newbox ()
+1: x/i $pc
+=> 0x400668 <newbox+64>:	ldr	x9, [x29, #32]
+(gdb) 
+0x000000000040066c in newbox ()
+1: x/i $pc
+=> 0x40066c <newbox+68>:	str	x9, [x8, #16]
+(gdb) 
+0x0000000000400670 in newbox ()
+1: x/i $pc
+=> 0x400670 <newbox+72>:	ldur	x9, [x29, #36]
+(gdb) 
+0x0000000000400674 in newbox ()
+1: x/i $pc
+=> 0x400674 <newbox+76>:	stur	x9, [x8, #20]
+(gdb) 
+0x0000000000400678 in newbox ()
+1: x/i $pc
+=> 0x400678 <newbox+80>:	ldr	x9, [x29, #16]
+(gdb) 
+0x000000000040067c in newbox ()
+1: x/i $pc
+=> 0x40067c <newbox+84>:	str	x9, [x8]
+(gdb) 
+0x0000000000400680 in newbox ()
+1: x/i $pc
+=> 0x400680 <newbox+88>:	ldp	x29, x30, [sp], #48
+(gdb) 
+0x0000000000400684 in newbox ()
+1: x/i $pc
+=> 0x400684 <newbox+92>:	ret
+(gdb) 
+0x00000000004007a4 in main ()
+1: x/i $pc
+=> 0x4007a4 <main+32>:	add	x0, x29, #0x10
+(gdb) x
+0x4007a8 <main+36>:	0x58000481
+(gdb) x mainbox
+No symbol "mainbox" in current context.
+(gdb) x newbox
+0x400628 <newbox>:	0xa9bd7bfd
+(gdb) x b
+No symbol "b" in current context.
+(gdb) x xo
+No symbol "xo" in current context.
+(gdb) x $x0
+0x15:	Cannot access memory at address 0x15
+(gdb) ni
+0x00000000004007a8 in main ()
+1: x/i $pc
+=> 0x4007a8 <main+36>:	ldr	x1, 0x400838 <else+40>
+(gdb) 
+0x00000000004007ac in main ()
+1: x/i $pc
+=> 0x4007ac <main+40>:	bl	0x4006ec <print_box>
+(gdb) 
+box first origin = (0, 0) width = 1  height = 1  area = 1
+0x00000000004007b0 in main ()
+1: x/i $pc
+=> 0x4007b0 <main+44>:	add	x0, x29, #0x28
+(gdb) 
+0x00000000004007b4 in main ()
+1: x/i $pc
+=> 0x4007b4 <main+48>:	ldr	x1, 0x400840 <else+48>
+(gdb) 
+0x00000000004007b8 in main ()
+1: x/i $pc
+=> 0x4007b8 <main+52>:	bl	0x4006ec <print_box>
+(gdb) 
+box second origin = (0, 0) width = 1  height = 1  area = 1
+0x00000000004007bc in main ()
+1: x/i $pc
+=> 0x4007bc <main+56>:	add	x0, x29, #0x10
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400728 in equal ()
+1: x/i $pc
+=> 0x400728 <equal+12>:	ldr	x1, [x9, #8]
+(gdb) ni
+0x000000000040072c in equal ()
+1: x/i $pc
+=> 0x40072c <equal+16>:	ldur	x11, [x9, #12]
+(gdb) 
+0x0000000000400730 in equal ()
+1: x/i $pc
+=> 0x400730 <equal+20>:	ldr	x12, [x9, #16]
+(gdb) 
+0x0000000000400734 in equal ()
+1: x/i $pc
+=> 0x400734 <equal+24>:	ldur	x13, [x9, #20]
+(gdb) 
+0x0000000000400738 in equal ()
+1: x/i $pc
+=> 0x400738 <equal+28>:	ldr	x14, [x9, #32]
+(gdb) 
+0x000000000040073c in equal ()
+1: x/i $pc
+=> 0x40073c <equal+32>:	ldur	x15, [x9, #36]
+(gdb) 
+0x0000000000400740 in equal ()
+1: x/i $pc
+=> 0x400740 <equal+36>:	ldr	x0, [x9, #40]
+(gdb) 
+0x0000000000400744 in equal ()
+1: x/i $pc
+=> 0x400744 <equal+40>:	ldur	x10, [x9, #44]
+(gdb) 
+0x0000000000400748 in equal ()
+1: x/i $pc
+=> 0x400748 <equal+44>:	cmp	x1, x14
+(gdb) 
+0x000000000040074c in equal ()
+1: x/i $pc
+=> 0x40074c <equal+48>:	b.ne	0x400810 <else>  // b.any
+(gdb) 
+0x0000000000400750 in equal ()
+1: x/i $pc
+=> 0x400750 <equal+52>:	cmp	x11, x15
+(gdb) 
+0x0000000000400754 in equal ()
+1: x/i $pc
+=> 0x400754 <equal+56>:	b.ne	0x400810 <else>  // b.any
+(gdb) 
+0x0000000000400758 in equal ()
+1: x/i $pc
+=> 0x400758 <equal+60>:	cmp	x12, x0
+(gdb) 
+0x000000000040075c in equal ()
+1: x/i $pc
+=> 0x40075c <equal+64>:	b.ne	0x400810 <else>  // b.any
+(gdb) 
+0x0000000000400760 in equal ()
+1: x/i $pc
+=> 0x400760 <equal+68>:	ldr	x0, 0x400828 <else+24>
+(gdb) 
+0x0000000000400764 in equal ()
+1: x/i $pc
+=> 0x400764 <equal+72>:	mov	x1, x10
+(gdb) 
+0x0000000000400768 in equal ()
+1: x/i $pc
+=> 0x400768 <equal+76>:	bl	0x400490 <printf@plt>
+(gdb) 
+Changed box va1ues: 
+0x000000000040076c in equal ()
+1: x/i $pc
+=> 0x40076c <equal+80>:	cmp	x13, x10
+(gdb) 
+0x0000000000400770 in equal ()
+1: x/i $pc
+=> 0x400770 <equal+84>:	b.ne	0x400810 <else>  // b.any
+(gdb) 
+0x0000000000400774 in equal ()
+1: x/i $pc
+=> 0x400774 <equal+88>:	mov	x0, #0x1                   	// #1
+(gdb) 
+0x0000000000400778 in equal ()
+1: x/i $pc
+=> 0x400778 <equal+92>:	ldp	x29, x30, [sp], #16
+(gdb) 
+0x000000000040077c in equal ()
+1: x/i $pc
+=> 0x40077c <equal+96>:	ret
+(gdb) 
+
+Breakpoint 4, 0x00000000004007c4 in main_2 ()
+1: x/i $pc
+=> 0x4007c4 <main_2>:	cmp	x0, #0x1
+(gdb) 
+0x00000000004007c8 in main_2 ()
+1: x/i $pc
+=> 0x4007c8 <main_2+4>:	b.ne	0x400808 <end>  // b.any
+(gdb) 
+0x00000000004007cc in main_2 ()
+1: x/i $pc
+=> 0x4007cc <main_2+8>:	add	x0, x29, #0x10
+(gdb) 
+0x00000000004007d0 in main_2 ()
+1: x/i $pc
+=> 0x4007d0 <main_2+12>:	ldr	x1, 0x400848 <else+56>
+(gdb) c
+Continuing.
+
+Breakpoint 5, 0x00000000004006c0 in expand ()
+1: x/i $pc
+=> 0x4006c0 <expand+12>:	ldr	x10, [x9, #16]
+(gdb) ni
+0x00000000004006c4 in expand ()
+1: x/i $pc
+=> 0x4006c4 <expand+16>:	ldur	x11, [x9, #20]
+(gdb) 
+0x00000000004006c8 in expand ()
+1: x/i $pc
+=> 0x4006c8 <expand+20>:	ldr	x12, [x9]
+(gdb) 
+0x00000000004006cc in expand ()
+1: x/i $pc
+=> 0x4006cc <expand+24>:	mul	x10, x10, x1
+(gdb) 
+0x00000000004006d0 in expand ()
+1: x/i $pc
+=> 0x4006d0 <expand+28>:	mul	x11, x11, x1
+(gdb) 
+0x00000000004006d4 in expand ()
+1: x/i $pc
+=> 0x4006d4 <expand+32>:	mul	x12, x10, x11
+(gdb) 
+0x00000000004006d8 in expand ()
+1: x/i $pc
+=> 0x4006d8 <expand+36>:	str	x10, [x9, #16]
+(gdb) 
+0x00000000004006dc in expand ()
+1: x/i $pc
+=> 0x4006dc <expand+40>:	stur	x11, [x9, #20]
+(gdb) 
+0x00000000004006e0 in expand ()
+1: x/i $pc
+=> 0x4006e0 <expand+44>:	str	x12, [x9]
+(gdb) 
+0x00000000004006e4 in expand ()
+1: x/i $pc
+=> 0x4006e4 <expand+48>:	ldp	x29, x30, [sp], #16
+(gdb) 
+0x00000000004006e8 in expand ()
+1: x/i $pc
+=> 0x4006e8 <expand+52>:	ret
+(gdb) 
+0x00000000004007e8 in main_2 ()
+1: x/i $pc
+=> 0x4007e8 <main_2+36>:	add	x0, x29, #0x10
+(gdb) 
+0x00000000004007ec in main_2 ()
+1: x/i $pc
+=> 0x4007ec <main_2+40>:	ldr	x1, 0x400838 <else+40>
+(gdb) 
+0x00000000004007f0 in main_2 ()
+1: x/i $pc
+=> 0x4007f0 <main_2+44>:	bl	0x4006ec <print_box>
+(gdb) 
+box first origin = (-5, 7) width = 1  height = 1  area = 1
+0x00000000004007f4 in main_2 ()
+1: x/i $pc
+=> 0x4007f4 <main_2+48>:	add	x0, x29, #0x28
+(gdb) 
+0x00000000004007f8 in main_2 ()
+1: x/i $pc
+=> 0x4007f8 <main_2+52>:	ldr	x1, 0x400840 <else+48>
+(gdb) 
+0x00000000004007fc in main_2 ()
+1: x/i $pc
+=> 0x4007fc <main_2+56>:	bl	0x4006ec <print_box>
+(gdb) 
+box second origin = (0, 0) width = 3  height = 3  area = 9
+0x0000000000400800 in main_2 ()
+1: x/i $pc
+=> 0x400800 <main_2+60>:	ldp	x29, x30, [sp], #64
+(gdb) 
+0x0000000000400804 in main_2 ()
+1: x/i $pc
+=> 0x400804 <main_2+64>:	ret
+(gdb) 
+__libc_start_main (main=0x0, argc=0, argv=0x0, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=<optimized out>) at libc-start.c:329
+329	  exit (result);
+1: x/i $pc
+=> 0xffffb7e1d66c <__libc_start_main+236>:	bl	0xffffb7e36d50 <__GI_exit>
+(gdb) 
+[Inferior 1 (process 23534) exited with code 073]
+(gdb) 
+The program is not being run.
+(gdb) q
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG4steven.canonalmagro@csa2:~/CPSC355/ASG4$ exit
+exit
+
+Script done on 2018-06-15 01:33:56-0600

@@ -1,0 +1,304 @@
+Script started on 2018-06-07 23:07:51-0600
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG3steven.canonalmagro@csa2:~/CPSC355/ASG3$ vim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG3steven.canonalmagro@csa2:~/CPSC355/ASG3$ m4 assign3..m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG3steven.canonalmagro@csa2:~/CPSC355/ASG3$ gcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s -[4Po asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s -[4Po asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s -[4Po asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign3.m[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s --o asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s -[4Po asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5P./asg
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvim assign33.m[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm4 assign3.m > asg.s[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgcc asg.s -[4Po asg[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgdb ash[Kg
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from asg...(no debugging symbols found)...done.
+(gdb) b main
+Breakpoint 1 at 0x400628
+(gdb) b reset
+Breakpoint 2 at 0x40067c
+(gdb) b reset_3
+Breakpoint 3 at 0x400740
+(gdb) r
+Starting program: /home/uga/steven.canonalmagro/CPSC355/ASG3/asg 
+
+Breakpoint 1, 0x0000000000400628 in main ()
+(gdb) sif[K[K[Kdisplay [K/i $pc
+1: x/i $pc
+=> 0x400628 <main+12>:	str	w19, [x29, #16]
+(gdb) ni
+0x000000000040062c in main ()
+1: x/i $pc
+=> 0x40062c <main+16>:	b	0x400630 <test>
+(gdb) x $x29+16
+0xfffffffff040:	0x00000000
+(gdb) ni
+0x0000000000400630 in test ()
+1: x/i $pc
+=> 0x400630 <test>:	ldr	w19, [x29, #16]
+(gdb) 
+0x0000000000400634 in test ()
+1: x/i $pc
+=> 0x400634 <test+4>:	cmp	w19, #0x32
+(gdb) 
+0x0000000000400638 in test ()
+1: x/i $pc
+=> 0x400638 <test+8>:	
+    b.ge	0x400678 <reset>  // b.tcont
+(gdb) 
+0x000000000040063c in test ()
+1: x/i $pc
+=> 0x40063c <test+12>:	b	0x400640 <loop>
+(gdb) 
+0x0000000000400640 in loop ()
+1: x/i $pc
+=> 0x400640 <loop>:	
+    bl	0x4004b0 <rand@plt>
+(gdb) 
+0x0000000000400644 in loop ()
+1: x/i $pc
+=> 0x400644 <loop+4>:	and	w21, w0, #0xff
+(gdb) 
+0x0000000000400648 in loop ()
+1: x/i $pc
+=> 0x400648 <loop+8>:	ldr	x19, [x29, #16]
+(gdb) 
+0x000000000040064c in loop ()
+1: x/i $pc
+=> 0x40064c <loop+12>:	add	x22, x29, #0x14
+(gdb) 
+0x0000000000400650 in loop ()
+1: x/i $pc
+=> 0x400650 <loop+16>:	
+    str	w21, [x22, w19, sxtw #2]
+(gdb) 
+0x0000000000400654 in loop ()
+1: x/i $pc
+=> 0x400654 <loop+20>:	adrp	x0, 0x400000
+(gdb) 
+0x0000000000400658 in loop ()
+1: x/i $pc
+=> 0x400658 <loop+24>:	add	x0, x0, #0x5f4
+(gdb) 
+0x000000000040065c in loop ()
+1: x/i $pc
+=> 0x40065c <loop+28>:	mov	w1, w19
+(gdb) x/s $x29+16
+0xfffffffff040:	""
+(gdb) x/s $x29+16[C[C[C[C[C[Cni[Kx/s $x29+16[C[1P $x29+16[1P $x29+16[C[C[C[C[C[C[C[C
+0xfffffffff040:	""
+(gdb) x $x29+16[K[K30[K[K20
+0xfffffffff044:	"g"
+(gdb) x $x29+2016/s $x29+16[C[C[C[C[C[C[C[2P $x29+1620[C[C[C[C[C[C[Kc
+Continuing.
+v[0]: 103
+v[1]: 198
+v[2]: 105
+v[3]: 115
+v[4]: 81
+v[5]: 255
+v[6]: 74
+v[7]: 236
+v[8]: 41
+v[9]: 205
+v[10]: 186
+v[11]: 171
+v[12]: 242
+v[13]: 251
+v[14]: 227
+v[15]: 70
+v[16]: 124
+v[17]: 194
+v[18]: 84
+v[19]: 248
+v[20]: 27
+v[21]: 232
+v[22]: 231
+v[23]: 141
+v[24]: 118
+v[25]: 90
+v[26]: 46
+v[27]: 99
+v[28]: 51
+v[29]: 159
+v[30]: 201
+v[31]: 154
+v[32]: 102
+v[33]: 50
+v[34]: 13
+v[35]: 183
+v[36]: 49
+v[37]: 88
+v[38]: 163
+v[39]: 90
+v[40]: 37
+v[41]: 93
+v[42]: 5
+v[43]: 23
+v[44]: 88
+v[45]: 233
+v[46]: 94
+v[47]: 212
+v[48]: 171
+v[49]: 178
+
+Breakpoint 2, 0x000000000040067c in reset ()
+1: x/i $pc
+=> 0x40067c <reset+4>:	str	w19, [x29, #16]
+(gdb) ni
+0x0000000000400680 in reset ()
+1: x/i $pc
+=> 0x400680 <reset+8>:	
+    b	0x400684 <test_sort>
+(gdb) ni[1Pcx $x29+2016
+0xfffffffff040:	""
+(gdb) x $x29+16[C[C[C[C[C[Cni[K[1Pcni
+0x0000000000400684 in test_sort ()
+1: x/i $pc
+=> 0x400684 <test_sort>:	
+    ldr	w19, [x29, #16]
+(gdb) 
+0x0000000000400688 in test_sort ()
+1: x/i $pc
+=> 0x400688 <test_sort+4>:	cmp	w19, #0x31
+(gdb) 
+0x000000000040068c in test_sort ()
+1: x/i $pc
+=> 0x40068c <test_sort+8>:	
+    b.ge	0x40073c <reset_3>  // b.tcont
+(gdb) 
+0x0000000000400690 in test_sort ()
+1: x/i $pc
+=> 0x400690 <test_sort+12>:	
+    b	0x400694 <loop_sort>
+(gdb) 
+0x0000000000400694 in loop_sort ()
+1: x/i $pc
+=> 0x400694 <loop_sort>:	
+    ldr	w19, [x29, #16]
+(gdb) 
+0x0000000000400698 in loop_sort ()
+1: x/i $pc
+=> 0x400698 <loop_sort+4>:	
+    str	w19, [x29, #220]
+(gdb) 
+0x000000000040069c in loop_sort ()
+1: x/i $pc
+=> 0x40069c <loop_sort+8>:	
+    b	0x4006b0 <reset_2>
+(gdb) 
+0x00000000004006b0 in reset_2 ()
+1: x/i $pc
+=> 0x4006b0 <reset_2>:	ldr	w19, [x29, #16]
+(gdb) 
+0x00000000004006b4 in reset_2 ()
+1: x/i $pc
+=> 0x4006b4 <reset_2+4>:	
+    add	w19, w19, #0x1
+(gdb) 
+0x00000000004006b8 in reset_2 ()
+1: x/i $pc
+=> 0x4006b8 <reset_2+8>:	
+    str	w19, [x29, #224]
+(gdb) p $x28[K9 [K+20
+$1 = 281474976706628
+(gdb) p $x29+20[C[C[C[C[C[Cni[Kx $x29+16[C[C[C[C[C[Cni[K
+0x00000000004006bc in reset_2 ()
+1: x/i $pc
+=> 0x4006bc <reset_2+12>:	
+    b	0x4006a0 <test_sortception>
+(gdb) 
+0x00000000004006a0 in test_sortception ()
+1: x/i $pc
+=> 0x4006a0 <test_sortception>:	
+    ldr	w19, [x29, #224]
+(gdb) 
+0x00000000004006a4 in test_sortception ()
+1: x/i $pc
+=> 0x4006a4 <test_sortception+4>:	
+    cmp	w19, #0x32
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x0000000000400740 in reset_3 ()
+1: x/i $pc
+=> 0x400740 <reset_3+4>:	
+    str	w19, [x29, #16]
+(gdb) c
+Continuing.
+
+Sorted Array:
+v[0]: 5
+v[1]: 13
+v[2]: 23
+v[3]: 27
+v[4]: 37
+v[5]: 41
+v[6]: 46
+v[7]: 49
+v[8]: 50
+v[9]: 51
+v[10]: 70
+v[11]: 74
+v[12]: 81
+v[13]: 84
+v[14]: 88
+v[15]: 88
+v[16]: 90
+v[17]: 90
+v[18]: 93
+v[19]: 94
+v[20]: 99
+v[21]: 102
+v[22]: 103
+v[23]: 105
+v[24]: 115
+v[25]: 118
+v[26]: 124
+v[27]: 141
+v[28]: 154
+v[29]: 159
+v[30]: 163
+v[31]: 171
+v[32]: 171
+v[33]: 178
+v[34]: 183
+v[35]: 186
+v[36]: 194
+v[37]: 198
+v[38]: 201
+v[39]: 205
+v[40]: 212
+v[41]: 227
+v[42]: 231
+v[43]: 232
+v[44]: 233
+v[45]: 236
+v[46]: 242
+v[47]: 248
+v[48]: 251
+v[49]: 255
+[Inferior 1 (process 3949) exited with code 013]
+(gdb) q
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG3steven.canonalmagro@csa2:~/CPSC355/ASG3$ exit
+exit
+
+Script done on 2018-06-07 23:11:27-0600

@@ -1,0 +1,22 @@
+Script started on 2018-06-22 15:51:35-0600
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ gcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o a[Kgcc a.s -o am4 a5a.m > a.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ m4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[7Pcd ASG5CPSC355[1Pvim a5a.m[2Pcd ASG5CPSC355[3PASG5vim a5a.mcd CPSC355[3PASG5m4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[Km4 a5a.m > a.s[2Pgcc a.s -o am4 a5a.m > a.s[Km4 a5b.m > b.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ gcc b.s -o asgb
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ gcc b.s -o asgb[1Pm4 a5b.m > b.sa.m > a.s[2Pgcc a.s -o am4 a5a.m > a.sb.m > b.sgcc b.s -o asgb[K./asgb 1 1 1996
+January 1st, 1996
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asgb 1 1 1996[1P[1@1[1@3
+input is either
+ not a month number
+ not a day of the month
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asgb 13 1 1996[K[K[K[K[K
+usage: a5b mm dd yyyy
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asgb 13 1 1996[1P[C[C[C[C[C[C[C[1P 19962 1996[1P[1@2
+February 2nd, 1996
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asgb 2 2 1996[1P[1@1[1@9[1P[1@0
+October 2nd, 1996
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asgb 10 2 1996[1P[1P[1@8[C[C[1P 19962 19963 1996
+August 23rd, 1996
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ exit
+exit
+
+Script done on 2018-06-22 15:53:38-0600

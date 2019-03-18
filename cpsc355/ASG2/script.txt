@@ -1,0 +1,220 @@
+Script started on 2018-05-31 22:35:24-0600
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ assign2b[Ka.m,assign2a.mmassign2a.m[1Passign2a.m[1Passign2a.mmassign2a.m4assign2a.m assign2a.m[C[C[C[C[C[C[C[C[C[C > assign2a.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ gcc ss[K[Kassign2a.s -o asga
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ clear
+[3J[H[2J]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ a[Kgb[Kdb asga
+GNU gdb (GDB) Fedora 8.0-13.fc26
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "aarch64-redhat-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from asga...(no debugging symbols found)...done.
+(gdb) set[K[K[Kb main
+Breakpoint 1 at 0x400660
+(gdb) b negative_check
+Breakpoint 2 at 0x400668
+(gdb) b product option[K[K[K[K[K[K[K_opo[Ktion
+Breakpoint 3 at 0x4006bc
+(gdb) b print_2
+Breakpoint 4 at 0x4006dc
+(gdb) b combine
+Breakpoint 5 at 0x4006e4
+(gdb) r
+Starting program: /home/uga/steven.canonalmagro/CPSC355/ASG2/asga 
+
+Breakpoint 1, 0x0000000000400660 in main ()
+(gdb) sis[K[K[Kdisplay/i $pc
+1: x/i $pc
+=> 0x400660 <main+60>:	bl	0x400490 <printf@plt>
+(gdb) ni
+multiplier = 0x00000028 (40)  multiplicand = 0xdead0000 (-559087616) 
+
+0x0000000000400664 in main ()
+1: x/i $pc
+=> 0x400664 <main+64>:	b	0x400668 <negative_check>
+(gdb) 
+
+Breakpoint 2, 0x0000000000400668 in negative_check ()
+1: x/i $pc
+=> 0x400668 <negative_check>:	cmp	w19, #0x0
+(gdb) 
+0x000000000040066c in negative_check ()
+1: x/i $pc
+=> 0x40066c <negative_check+4>:	b.le	0x4006b0 <loop_test>
+(gdb) 
+0x0000000000400670 in negative_check ()
+1: x/i $pc
+=> 0x400670 <negative_check+8>:	mov	w23, w27
+(gdb) 
+0x0000000000400674 in negative_check ()
+1: x/i $pc
+=> 0x400674 <negative_check+12>:	b	0x4006b0 <loop_test>
+(gdb) 
+0x00000000004006b0 in loop_test ()
+1: x/i $pc
+=> 0x4006b0 <loop_test>:	cmp	w22, #0x1f
+(gdb) 
+0x00000000004006b4 in loop_test ()
+1: x/i $pc
+=> 0x4006b4 <loop_test+4>:	b.gt	0x4006bc <product_option>
+(gdb) 
+0x00000000004006b8 in loop_test ()
+1: x/i $pc
+=> 0x4006b8 <loop_test+8>:	b	0x400694 <loop_1>
+(gdb) 
+0x0000000000400694 in loop_1 ()
+1: x/i $pc
+=> 0x400694 <loop_1>:	tst	w19, #0x1
+(gdb) 
+0x0000000000400698 in loop_1 ()
+1: x/i $pc
+=> 0x400698 <loop_1+4>:	b.eq	0x400678 <loop_2>  // b.none
+(gdb) 
+0x0000000000400678 in loop_2 ()
+1: x/i $pc
+=> 0x400678 <loop_2>:	asr	w19, w19, #1
+(gdb) 
+0x000000000040067c in loop_2 ()
+1: x/i $pc
+=> 0x40067c <loop_2+4>:	tst	w21, #0x1
+(gdb) 
+0x0000000000400680 in loop_2 ()
+1: x/i $pc
+=> 0x400680 <loop_2+8>:	b.eq	0x40068c <else>  // b.none
+(gdb) 
+0x000000000040068c in else ()
+1: x/i $pc
+=> 0x40068c <else>:	and	w19, w19, #0x7fffffff
+(gdb) 
+0x0000000000400690 in else ()
+1: x/i $pc
+=> 0x400690 <else+4>:	b	0x4006a4 <product_shift>
+(gdb) 
+0x00000000004006a4 in product_shift ()
+1: x/i $pc
+=> 0x4006a4 <product_shift>:	asr	w21, w21, #1
+(gdb) 
+0x00000000004006a8 in product_shift ()
+1: x/i $pc
+=> 0x4006a8 <product_shift+4>:	add	w22, w22, #0x1
+(gdb) 
+0x00000000004006ac in product_shift ()
+1: x/i $pc
+=> 0x4006ac <product_shift+8>:	b	0x4006b0 <loop_test>
+(gdb) 
+0x00000000004006b0 in loop_test ()
+1: x/i $pc
+=> 0x4006b0 <loop_test>:	cmp	w22, #0x1f
+(gdb) p $w22
+$1 = 1
+(gdb) c
+Continuing.
+
+Breakpoint 3, 0x00000000004006bc in product_option ()
+1: x/i $pc
+=> 0x4006bc <product_option>:	cmp	w23, #0x1
+(gdb) ni
+0x00000000004006c0 in product_option ()
+1: x/i $pc
+=> 0x4006c0 <product_option+4>:	b.ne	0x4006cc <print_2>  // b.any
+(gdb) p $w23
+$2 = 0
+(gdb) ni
+0x00000000004006cc in print_2 ()
+1: x/i $pc
+=> 0x4006cc <print_2>:	adrp	x0, 0x400000
+(gdb) 
+0x00000000004006d0 in print_2 ()
+1: x/i $pc
+=> 0x4006d0 <print_2+4>:	add	x0, x0, #0x5dc
+(gdb) 
+0x00000000004006d4 in print_2 ()
+1: x/i $pc
+=> 0x4006d4 <print_2+8>:	mov	w1, w21
+(gdb) 
+0x00000000004006d8 in print_2 ()
+1: x/i $pc
+=> 0x4006d8 <print_2+12>:	mov	w2, w19
+(gdb) 
+
+Breakpoint 4, 0x00000000004006dc in print_2 ()
+1: x/i $pc
+=> 0x4006dc <print_2+16>:	bl	0x400490 <printf@plt>
+(gdb) 
+product = 0xfffffffa  multiplier = 0xcb080000
+0x00000000004006e0 in print_2 ()
+1: x/i $pc
+=> 0x4006e0 <print_2+20>:	b	0x4006e4 <combine>
+(gdb) 
+
+Breakpoint 5, 0x00000000004006e4 in combine ()
+1: x/i $pc
+=> 0x4006e4 <combine>:	sxtw	x25, w21
+(gdb) 
+0x00000000004006e8 in combine ()
+1: x/i $pc
+=> 0x4006e8 <combine+4>:	and	x25, x25, #0xffffffff
+(gdb) 
+0x00000000004006ec in combine ()
+1: x/i $pc
+=> 0x4006ec <combine+8>:	lsl	x25, x25, #32
+(gdb) p$[K $x25
+$3 = 4294967290
+(gdb) ni
+0x00000000004006f0 in combine ()
+1: x/i $pc
+=> 0x4006f0 <combine+12>:	sxtw	x26, w19
+(gdb) 
+0x00000000004006f4 in combine ()
+1: x/i $pc
+=> 0x4006f4 <combine+16>:	and	x26, x26, #0xffffffff
+(gdb) p x26
+No symbol "x26" in current context.
+(gdb) p x26[C$x26
+$4 = -888668160
+(gdb) ni
+0x00000000004006f8 in combine ()
+1: x/i $pc
+=> 0x4006f8 <combine+20>:	add	x24, x26, x25
+(gdb) 
+0x00000000004006fc in combine ()
+1: x/i $pc
+=> 0x4006fc <combine+24>:	adrp	x0, 0x400000
+(gdb) 
+0x0000000000400700 in combine ()
+1: x/i $pc
+=> 0x400700 <combine+28>:	add	x0, x0, #0x604
+(gdb) p $x42[K[K24
+$5 = -22363504640
+(gdb) ni
+0x0000000000400704 in combine ()
+1: x/i $pc
+=> 0x400704 <combine+32>:	mov	x1, x24
+(gdb) 
+0x0000000000400708 in combine ()
+1: x/i $pc
+=> 0x400708 <combine+36>:	mov	x2, x24
+(gdb) 
+0x000000000040070c in combine ()
+1: x/i $pc
+=> 0x40070c <combine+40>:	bl	0x400490 <printf@plt>
+(gdb) c
+Continuing.
+62-bit result = 0xfffffffacb080000 (-22363504640)
+[Inferior 1 (process 1093) exited with code 062]
+(gdb) q
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ quit
+bash: quit: command not found
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG2steven.canonalmagro@csa2:~/CPSC355/ASG2$ exit
+exit
+
+Script done on 2018-05-31 22:40:50-0600

@@ -1,0 +1,15 @@
+Script started on 2018-06-22 19:55:31-0600
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ m4 a5a/[K.m > a.s
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ gcc a5sMasin[K[K[K[Kaim[1PMaimaMaim[C[C[C[C[Kn.c a.s -o asga
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ gcc a5aMain.c a.s -o asga[K./ [Kasga
+Segmentation fault (core dumped)
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ ./asga 1+1=
+Segmentation fault (core dumped)
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ 1 + 1 = 
+bash: 1: command not found
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ 1 + 1 = ./asga 1+1= +1=[C 1=[C =[C
+Segmentation fault (core dumped)
+]0;steven.canonalmagro@csa2:~/CPSC355/ASG5steven.canonalmagro@csa2:~/CPSC355/ASG5$ exit
+exit
+
+Script done on 2018-06-22 19:59:19-0600
