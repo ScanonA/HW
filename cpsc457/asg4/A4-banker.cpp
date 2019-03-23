@@ -17,6 +17,7 @@
 #include <algorithm>
 
 using namespace std;
+Boolean cycle = false;
 
 class Banker
 {
@@ -80,6 +81,28 @@ public:
      * @return Whether granting the request will lead to a safe state.
      */
     bool isSafe (int pid, int * req, string & sequenceOrReason) {
+      int new_avail [];
+      if(!cycle) {
+        for(int i; i<numResources;i++) {
+          //printf ("req: %ld\n", req[i]);
+          if((available[i] - reg[i]) < 0) {
+            sequenceOrReason = "not enough resources available.";
+            return false;
+          }
+          else if(max[pid][i] < (reg[i]+available[i])) {
+            sequenceOrReason = "request is invalid (exceeding declared max for process)"
+            return false;
+          }
+        }
+        cycle = true;
+      }
+      for(int i; i<numResources;i++)  {
+        new_avail = (allocation[pid][i] + reg[i]) + available[i];
+      }
+
+
+
+
         sequenceOrReason = "Not implemented yet.";
         return false;
     }
