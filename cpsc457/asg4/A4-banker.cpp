@@ -15,9 +15,9 @@
 #include <sstream>
 #include <stdlib.h>
 #include <algorithm>
+#include <string>
 
 using namespace std;
-Boolean cycle = false;
 
 class Banker
 {
@@ -81,30 +81,61 @@ public:
      * @return Whether granting the request will lead to a safe state.
      */
     bool isSafe (int pid, int * req, string & sequenceOrReason) {
-      int new_avail [];
-      if(!cycle) {
-        for(int i; i<numResources;i++) {
-          //printf ("req: %ld\n", req[i]);
-          if((available[i] - reg[i]) < 0) {
-            sequenceOrReason = "not enough resources available.";
+        int new_available[numResources];
+        int done[numProc];
+        int count = 0;
+        int exit_flag = 0;
+        for(int i=0; i<numResources; i++) {
+          if(req[i] > available[i]) {
+            sequenceOrReason = "not enough resources available";
             return false;
           }
-          else if(max[pid][i] < (reg[i]+available[i])) {
-            sequenceOrReason = "request is invalid (exceeding declared max for process)"
+          if((req[i] + allocation[pid][i]) > max[pid][i]) {
+            sequenceOrReason = "request is invalid (exeeding declared max for process)";
             return false;
+          }
+          new_available[i] = (allocation[pid][i] + available[i]);
+          //printf("new_available[%d] = %d\n", i, new_available[i]);
+        }
+        sequenceOrReason = "P1";
+        for(int i=0; i<numProc; i++) {
+          done[i] = -46290;
+        }
+        done[pid] = pid;
+        exit_flag++;
+
+        while(1) {
+          for(int p=0; p<numProc; p++) {
+            for(int i=0; i<numProc; i++) {
+              if(p==done[i] && p<numProc) p++;
+              if(p>=numProc) {
+                //printf("%d\n", p);
+                if(exit_flag == numProc) return true;
+              }
+            }
+            for(int i=0; i<numResources; i++) {
+              if((max[p][i]-allocation[p][i]) <= new_available[i]) {
+                count++;
+              }
+              else if(exit_flag == numProc-1 && (max[p][i]-allocation[p][i]) > new_available[i]) {
+                sequenceOrReason = "request would result in an unsafe state";
+                return false;
+              }
+            }
+            //printf("%d\n", p);
+            if(count == 3) {
+              for(int i=0; i<numResources; i++) {
+                new_available[i] += allocation[p][i];
+              }
+              sequenceOrReason += " P"+to_string(p);
+              done[p] = p;
+              exit_flag++;
+              p=-1;
+            }
+            count = 0;
           }
         }
-        cycle = true;
-      }
-      for(int i; i<numResources;i++)  {
-        new_avail = (allocation[pid][i] + reg[i]) + available[i];
-      }
-
-
-
-
-        sequenceOrReason = "Not implemented yet.";
-        return false;
+        return true;
     }
 };
 
