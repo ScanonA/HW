@@ -81,30 +81,28 @@ public:
      * @return Whether granting the request will lead to a safe state.
      */
     bool isSafe (int pid, int * req, string & sequenceOrReason) {
-        int new_available[numResources];
         int done[numProc];
         int count = 0;
         int exit_flag = 0;
         for(int i=0; i<numResources; i++) {
           if(req[i] > available[i]) {
-            sequenceOrReason = "not enough resources available";
+            sequenceOrReason = "not enough resources available.";
             return false;
           }
           if((req[i] + allocation[pid][i]) > max[pid][i]) {
-            sequenceOrReason = "request is invalid (exeeding declared max for process)";
+            sequenceOrReason = "request is invalid (exeeding declared max for process).";
             return false;
           }
-          new_available[i] = (allocation[pid][i] + available[i]);
+          available[i] -= req[i];
+          allocation[pid][i] += req[i];
           //printf("new_available[%d] = %d\n", i, new_available[i]);
         }
-        sequenceOrReason = "P1";
+        //printf("request is granted\n");
         for(int i=0; i<numProc; i++) {
           done[i] = -46290;
         }
-        done[pid] = pid;
-        exit_flag++;
-
-        while(1) {
+        int t = 0;
+        while(t < (numProc*10)) {
           for(int p=0; p<numProc; p++) {
             for(int i=0; i<numProc; i++) {
               if(p==done[i] && p<numProc) p++;
@@ -114,28 +112,29 @@ public:
               }
             }
             for(int i=0; i<numResources; i++) {
-              if((max[p][i]-allocation[p][i]) <= new_available[i]) {
+              //printf("p is -->%d \t max is --> %d\n", p, max[p][i]);
+              if((max[p][i]-allocation[p][i]) <= available[i]) {
                 count++;
-              }
-              else if(exit_flag == numProc-1 && (max[p][i]-allocation[p][i]) > new_available[i]) {
-                sequenceOrReason = "request would result in an unsafe state";
-                return false;
               }
             }
             //printf("%d\n", p);
-            if(count == 3) {
+            if(count == numResources) {
               for(int i=0; i<numResources; i++) {
-                new_available[i] += allocation[p][i];
+                available[i] += allocation[p][i];
               }
-              sequenceOrReason += " P"+to_string(p);
+              if(exit_flag==0) sequenceOrReason += " P"+to_string(p);
+              else sequenceOrReason += ", P"+to_string(p);
+              //printf("done --> %d\n", p);
               done[p] = p;
               exit_flag++;
               p=-1;
             }
             count = 0;
+            t++;
           }
         }
-        return true;
+        sequenceOrReason = "request would result in an unsafe state";
+        return false;
     }
 };
 
