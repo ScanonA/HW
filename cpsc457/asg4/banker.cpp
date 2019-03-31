@@ -80,57 +80,72 @@ public:
      * @param sequenceOrReason  The safe execution sequence returned by the algorithm
      * @return Whether granting the request will lead to a safe state.
      */
+     /*
+     ############################################################
+     # First Name: Steven
+     # Last Name: Canon-Almagro
+     # Student ID: 10155792
+     # Course: CPSC457
+     # Tutorial: TUT04
+     # Assigment: 4
+     # Question: 1
+     # File Name: banker.cpp
+     # method: isSafe
+     ############################################################
+     */
     bool isSafe (int pid, int * req, string & sequenceOrReason) {
         int done[numProc];
         int count = 0;
         int exit_flag = 0;
         for(int i=0; i<numResources; i++) {
-          if(req[i] > available[i]) {
+          if(req[i] > available[i]) {//checking if request is more than what is available
             sequenceOrReason = "not enough resources available.";
             return false;
           }
-          if((req[i] + allocation[pid][i]) > max[pid][i]) {
+          if((req[i] + allocation[pid][i]) > max[pid][i]) { //checking if given request to the process would it exceed its max resources
             sequenceOrReason = "request is invalid (exeeding declared max for process).";
             return false;
           }
+          //if above tests fail the the request is completed and the resources are subtracted from available and given to process
           available[i] -= req[i];
           allocation[pid][i] += req[i];
           //printf("new_available[%d] = %d\n", i, new_available[i]);
         }
         //printf("request is granted\n");
+        //this for loop now checks if giving the requested resources would it put the whole system into an unsafe state
         for(int i=0; i<numProc; i++) {
-          done[i] = -46290;
+          done[i] = -46290; //Initializing done array with impossible values to not trigger any of the tests
         }
         int t = 0;
         while(t < (numProc*10)) {
           for(int p=0; p<numProc; p++) {
             for(int i=0; i<numProc; i++) {
-              if(p==done[i] && p<numProc) p++;
+              if(p==done[i] && p<numProc) p++; //if process in done array then it skips it
               if(p>=numProc) {
                 //printf("%d\n", p);
-                if(exit_flag == numProc) return true;
+                if(exit_flag == numProc) return true; //The state is safe to grant the request
               }
             }
             for(int i=0; i<numResources; i++) {
               //printf("p is -->%d \t max is --> %d\n", p, max[p][i]);
-              if((max[p][i]-allocation[p][i]) <= available[i]) {
-                count++;
+              if((max[p][i]-allocation[p][i]) <= available[i]) { //checking to see if there is enough resource to allocate the resources
+                count++; //increament counter is test is passed
               }
             }
             //printf("%d\n", p);
-            if(count == numResources) {
+            if(count == numResources) { //checking if process was able to get to its max with the resources available
               for(int i=0; i<numResources; i++) {
-                available[i] += allocation[p][i];
+                available[i] += allocation[p][i]; //process is done exe so its resources are added to available
               }
-              if(exit_flag==0) sequenceOrReason += " P"+to_string(p);
-              else sequenceOrReason += ", P"+to_string(p);
+              if(exit_flag==0) sequenceOrReason += " P"+to_string(p); //if first element, adding element to sequence
+              else sequenceOrReason += ", P"+to_string(p); //adding element to sequence
               //printf("done --> %d\n", p);
-              done[p] = p;
-              exit_flag++;
-              p=-1;
+              done[p] = p; //adding process to the done array
+              exit_flag++;//incrementing exit flag
+              p=-1; //reseting process back so it checks all the processes again (replacing a while that runs forever)
             }
-            count = 0;
-            t++;
+            count = 0; //resets count
+            t++; //increments t
           }
         }
         sequenceOrReason = "request would result in an unsafe state";
@@ -144,7 +159,7 @@ int main (int argc, char * const argv[])
     string conffile;       // The configuration file name
     int numProc;           // The number of processes
     int numResources;      // The number of resources
-    string sequenceOrReason;       // The execution sequence returned by the Banker's Algorithm
+    string sequenceOrReason;       // The execution sequence returned by the Banker's Algorithmrintf("request is granted\n");
     int i, j, index;       // Indices for the vectors and matrixes
     int pid;               // The ID of the process that is making the request
     string reqStr;         // The request vector in string format
@@ -155,8 +170,7 @@ int main (int argc, char * const argv[])
         cout << "Usage: banker <config file>\n";
         return 0;
     }
-    else
-    {
+    else {
         conffile = argv[1];
     }
 
