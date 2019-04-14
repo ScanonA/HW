@@ -1,3 +1,17 @@
+/*
+############################################################
+# First Name: Steven
+# Last Name: Canon-Almagro
+# Student ID: 10155792
+# Course: CPSC457
+# Tutorial: TUT04
+# Assigment: 5
+# Question: 6
+# File Name: pagesim.cpp
+############################################################
+*/
+//this code simulates the optimal, LRU, and Clock page replacement algorithms
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -9,6 +23,7 @@ using namespace std;
 
 vector<int> ref_string;
 int frame_num;
+
 //----------------------------------optimal algorithm---------------------------
 void optimal() {
   unordered_map<int, int> frame_count;
@@ -188,51 +203,52 @@ void clock_alg() {
     clock_int[i] = 0;
   }
 
-
+  //--start of the algorithm --
   for(int i=0; i<ref_string.size(); i++) {
 
-      for(int j=0; j<frame_num; j++) {
-        if(frame[j] == ref_string[i]) {
-          hit = true;
-          clock_int[pointer] = 1;
-          //cout<<"hit is true** ";
+    hit =false;
+    //checking if there is a hit
+    for(int j=0; j<frame_num; j++) {
+      //cout<<frame[j]<< " =? " << ref_string[i];
+      if(frame[j] == ref_string[i]) {
+        //cout<<" hit"<<endl;
+        hit = true;
+        clock_int[j] = 1;
+        break;
+      }
+      //cout<<" clock-> "<<clock_int[j]<<"  ";
+    }
+      //cout<<" pointer: "<<pointer;
+      //cout<<" ref: "<<ref_string[i];
+      //cout<<endl;
+
+    //if the numbers in the frame match the reference string we go here
+    if(hit==false) {
+      int ptemp = -1;
+      while (1) {
+        if(clock_int[pointer] == 0) { // then save the index of the clock pointer and move arm 
+          ptemp = pointer;
+          if(pointer == frame_num-1) pointer = 0;
+          else pointer++;
+          break;
+        } 
+        else { //if clock reference is 0 then it changes it to 0 and moves the arm forward 
+          clock_int[pointer] = 0;
+          if(pointer == frame_num-1) pointer = 0;
+          else pointer++;
         }
       }
-      cout<<endl;
-      for(int j=0; j<frame_num; j++) {
-        cout<<" clock->"<<clock_int[j];
-      }
-      cout<<" pointer: "<<pointer;
-      cout<<" ref: "<<ref_string[i];
-      cout<<endl;
-      while (hit == false) {
-          if(clock_int[pointer] == 0) {
-            frame[pointer] = ref_string[i];
-            clock_int[pointer] = 1;
-            page_faults++;
-            if(pointer < frame_num-1) {
-              pointer ++;
-            } else {
-              pointer = 0;
-            }
-            hit = true;
-          } else {
-            if(clock_int[pointer] == 1)
-            clock_int[pointer] = 0;
-            if(pointer < frame_num-1) {
-              pointer ++;
-            } else {
-              pointer = 0;
-            }
-          }
-      }
-    hit = false;
-    cout<<"reference: "<<ref_string[i];
-    cout<<" frame: ";
-    for(int j=0; j<frame_num; j++) {
-      cout<<frame[j]<<" ";
+      //replaces frame where the clock was pointing with the reference string
+      frame[ptemp] = ref_string[i];
+      clock_int[ptemp] = 1;
+      page_faults++;
     }
-    cout<<endl;
+    //cout<<"reference: "<<ref_string[i];
+    //cout<<" frame: ";
+    //for(int j=0; j<frame_num; j++) {
+    //  cout<<frame[j]<<" ";
+    //}
+    //cout<<endl;
   }
 
   cout<<"\t- frame: ";
@@ -247,7 +263,16 @@ void clock_alg() {
 //---------------------------------main----------------------------------------
 
 int main (int argc, char * const argv[]) {
-	string str = "";
+	//cout<<argc<<endl;
+  if(argc==1) {
+    cout<<"Too few arguments"<< "\n"<<"please enter the number of frames as argument"<<"\n"<<"Format: ./pagesim <number of frames> < <textname.txt>"<<endl;
+    return 0;
+  }
+  else if(argc>2) {
+    cout<<"Too many argmuments"<<"\n"<<"only enter the number of frames as argument"<<"\n"<<"Format: ./pagesim <number of frames> < <textname.txt>"<<endl;
+    return 0;
+  }
+  string str = "";
   frame_num = atoi(argv[1]);
 	while(getline(cin,str)) {
     stringstream ss(str);
