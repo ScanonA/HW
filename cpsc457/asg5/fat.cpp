@@ -60,7 +60,7 @@ int checkConsistency( int blockSize, std::vector<DEntry> & files, std::vector<in
 	}
 
 
-	for (int i = 0; i < files.size(); i++){
+	for (int i = 0; i < files.size(); i++) {
 		int index = files[i].ind;
 
 		files[i].hasCycle = false;
@@ -70,14 +70,14 @@ int checkConsistency( int blockSize, std::vector<DEntry> & files, std::vector<in
 
 
 		while (1){
-			if (index == -1){
-				break;
-			}
-			if (blocksByFile[i].find(index) != blocksByFile[i].end()){
+			if (index == -1) break;
+
+			if (blocksByFile[i].find(index) != blocksByFile[i].end()) {
 				files[i].hasCycle = true;
 				break;
 			}
-			else if (usedBlocks.find(index) != usedBlocks.end()){
+
+			else if (usedBlocks.find(index) != usedBlocks.end()) {
 				files[i].sharesBlocks = true;
 				blocksByFile[i].insert(index);
 				//if(blocksToFile[index] != i) {
@@ -85,6 +85,7 @@ int checkConsistency( int blockSize, std::vector<DEntry> & files, std::vector<in
 					//blocksToFile[index] = i;
 				//}
 			}
+
 			else {
 				usedBlocks.insert(index);
 				//blocksToFile[index] = i;
@@ -92,9 +93,7 @@ int checkConsistency( int blockSize, std::vector<DEntry> & files, std::vector<in
 				//cout<<"index"<<index<<endl;
 			}
 
-			if (index < fat.size()){
-				index = fat[index];
-			}
+			if (index < fat.size()) index = fat[index];
 
 		}
 
@@ -104,45 +103,33 @@ int checkConsistency( int blockSize, std::vector<DEntry> & files, std::vector<in
 		//cout << "\tBlocks: " << blocks << endl;
 		//cout << "\tSize: " << files[i].size << endl;
 
-		if (blocksByFile[i].size() > blocks){
-			files[i].tooManyBlocks = true;
-		}
-		else if (blocksByFile[i].size() < blocks){
-			files[i].tooFewBlocks = true;
-		}
+		if (blocksByFile[i].size() > blocks) files[i].tooManyBlocks = true;
+		
+		else if (blocksByFile[i].size() < blocks) files[i].tooFewBlocks = true;
 
 
 	}
-	for(int i = 0; i <files.size(); i++) {
+	/*for(int i=0; i<files.size(); i++) {
 		cout<<files[i].fname<<endl;
 		for ( std::set<int>::iterator itr = blocksByFile[i].begin(); itr != blocksByFile[i].end(); ++itr ) {
-			cout<<(*itr)<<" ";
+			//cout<<(*itr)<<" ";
 		}
 		cout<<endl;
-	}
+	}*/
 
-	for(int i = 0; i < files.size(); i++ ) {
-		for(int j = 1; j < files.size(); j++) {
-				//cout<<files[i].fname<<endl;
-				for ( std::set<int>::iterator itr = blocksByFile[i].begin(); itr != blocksByFile[i].end(); ++itr ) {
-					if(blocksByFile[j].find(*itr) != blocksByFile[j].end()) {
+	for(int i=0; i<files.size(); i++ ) {
+
+		for (std::set<int>::iterator itr = blocksByFile[i].begin(); itr != blocksByFile[i].end(); ++itr) {
+
+			for(int j=i+1; j<files.size(); j++) {
+				if(blocksByFile[j].find(*itr) != blocksByFile[j].end()) {
 						//cout<<"printing itr: "<<(*itr)<<endl;
 						files[i].sharesBlocks = true;
 						files[j].sharesBlocks = true;
 						break;
 					}
-				}
-					/*std::set<int>::iterator itr = blocksByFile[i].begin();
-					// Iterate till the end of set
-					while (itr != blocksByFile[i].end()) {
-						cout<<"itr: "<<(*itr)<<endl;
-						if(blocksByFile[i].find(*itr)  != blocksByFile[i].end()) {
-							files[i].sharesBlocks = true;
-							files[j].sharesBlocks = true;
-							break;
-						}
-						itr++;
-					}*/
+			}
+					
 		}
 	}
 
