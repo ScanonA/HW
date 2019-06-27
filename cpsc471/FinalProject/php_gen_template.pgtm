@@ -1,0 +1,1604 @@
+<Project version="18.3.0.7" edition="lite" localizationFileName="C:\Program Files (x86)\SQL Maestro Group\PHP Generator for MySQL Lite\lang.en.php" phpDriver="1" outputPath="C:\xampp\htdocs" copySystemFiles="true" generateModifiedDataOnly="true" outputFilesExtension="php" colorSchemeName="cerulean">
+  <ConnectionOptions host="localhost" port="3306" login="root" password="K*^IM?7AM&gt;KW]^P~" database="mysocial" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="">
+      <http_proxy_server use_proxy="false" port="8080"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ConnectionOptions>
+  <ScriptConnectionOptions host="localhost" port="3306" login="root" password="K*^IM?7AM&gt;KW]^P~" database="mysocial" client_encoding="utf8" allow_old_password="false">
+    <ssh_secure secure="false" port="22" authentication_mode="0"/>
+    <http_tunnel tunneling="false" url="">
+      <http_proxy_server use_proxy="false" port="8080"/>
+      <http_authentication/>
+    </http_tunnel>
+  </ScriptConnectionOptions>
+  <DataSources>
+    <DataSource name="ad"/>
+    <DataSource name="admin"/>
+    <DataSource name="advertiser"/>
+    <DataSource name="comment"/>
+    <DataSource name="contains"/>
+    <DataSource name="follow"/>
+    <DataSource name="logged_in"/>
+    <DataSource name="moderates"/>
+    <DataSource name="picture"/>
+    <DataSource name="post"/>
+    <DataSource name="report"/>
+    <DataSource name="repost"/>
+    <DataSource name="subscribes_to"/>
+    <DataSource name="tag"/>
+    <DataSource name="thread"/>
+    <DataSource name="user"/>
+    <DataSource name="video"/>
+    <DataSource name="vote"/>
+  </DataSources>
+  <Presentation disableMagicQuotesRuntime="false" showEnvironmentVariables="false" showExecutedQueries="false" showPHPErrorsAndWarnings="false" menuMode="1">
+    <Pages>
+      <Page type="table" tableName="ad" numberByDataSource="0" fileName="ad" caption="Ad" shortCaption="Ad" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Caption" caption="Caption" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Num_views" caption="Num Views" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Num_clicks" caption="Num Clicks" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Num_views"/>
+            <Column fieldName="Num_clicks"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="admin" numberByDataSource="0" fileName="admin" caption="Admin" shortCaption="Admin" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Password" caption="Password" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="IP_Address" caption="IP Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="45"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Employee_ID" caption="Employee ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </List>
+          <View>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Email_address" visible="false"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Employee_ID"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="advertiser" numberByDataSource="0" fileName="advertiser" caption="Advertiser" shortCaption="Advertiser" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Password" caption="Password" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="IP_Address" caption="IP Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="45"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Company_name" caption="Company Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="48"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </List>
+          <View>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </View>
+          <Edit>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </Print>
+          <Export>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Email_address" visible="false"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+            <Column fieldName="Company_name"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="comment" numberByDataSource="0" fileName="comment" caption="Comment" shortCaption="Comment" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="CText" caption="CText" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </List>
+          <View>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </View>
+          <Edit>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </Print>
+          <Export>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </Export>
+          <Compare>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="Link"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="CText"/>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="ID" visible="false"/>
+            <Column fieldName="Link" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="contains" numberByDataSource="0" fileName="contains" caption="Contains" shortCaption="Contains" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="thread" linkFieldName="Name" displayFieldName="Email_address" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </List>
+          <View>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </View>
+          <Edit>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </Print>
+          <Export>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Name"/>
+            <Column fieldName="Link"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="Link" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="follow" numberByDataSource="0" fileName="follow" caption="Follow" shortCaption="Follow" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Email_address1" caption="Email Address1" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address2" caption="Email Address2" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </List>
+          <View>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </View>
+          <Edit>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </Print>
+          <Export>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Email_address1"/>
+            <Column fieldName="Email_address2"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Email_address1" visible="false"/>
+            <Column fieldName="Email_address2" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="logged_in" numberByDataSource="0" fileName="logged_in" caption="Logged In" shortCaption="Logged In" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Password" caption="Password" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="IP_Address" caption="IP Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="45"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </List>
+          <View>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </View>
+          <Edit>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Print>
+          <Export>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Email_address" visible="false"/>
+            <Column fieldName="Password"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="moderates" numberByDataSource="0" fileName="moderates" caption="Moderates" shortCaption="Moderates" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="thread" linkFieldName="Name" displayFieldName="Email_address" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address2" caption="Email Address2" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </List>
+          <View>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </View>
+          <Edit>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </Print>
+          <Export>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+            <Column fieldName="Email_address2"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="Email_address" visible="false"/>
+            <Column fieldName="Email_address2" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="picture" numberByDataSource="0" fileName="picture" caption="Picture" shortCaption="Picture" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Caption" caption="Caption" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Resolution" caption="Resolution" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="post" numberByDataSource="0" fileName="post" caption="Post" shortCaption="Post" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Caption" caption="Caption" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Email_address"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="report" numberByDataSource="0" fileName="report" caption="Report" shortCaption="Report" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="ID" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="repost" numberByDataSource="0" fileName="repost" caption="Repost" shortCaption="Repost" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="ID" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="subscribes_to" numberByDataSource="0" fileName="subscribes_to" caption="Subscribes To" shortCaption="Subscribes To" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="thread" linkFieldName="Name" displayFieldName="Email_address" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </List>
+          <View>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </View>
+          <Edit>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Print>
+          <Export>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="Email_address" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="tag" numberByDataSource="0" fileName="tag" caption="Tag" shortCaption="Tag" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Tagtext" caption="Tagtext" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="24"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Tagtext"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Tagtext" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="thread" numberByDataSource="0" fileName="thread" caption="Thread" shortCaption="Thread" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Email_address" caption="Email Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="logged_in" linkFieldName="Email_address" displayFieldName="Password" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </List>
+          <View>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </View>
+          <Edit>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Print>
+          <Export>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Name"/>
+            <Column fieldName="Email_address"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="Email_address"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="user" numberByDataSource="0" fileName="user" caption="User" shortCaption="User" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="IP_Address" caption="IP Address" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="45"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </List>
+          <View>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </View>
+          <Edit>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Print>
+          <Export>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+            <Column fieldName="IP_Address"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="ID" visible="false"/>
+            <Column fieldName="IP_Address"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="video" numberByDataSource="0" fileName="video" caption="Video" shortCaption="Video" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Caption" caption="Caption" showColumnFilter="false" canSetNull="true" selectedFilterOperators="1589247">
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="textArea" columnCount="50" rowCount="8" placeholder=""/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Resolution" caption="Resolution" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Length" caption="Length" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Caption"/>
+            <Column fieldName="Resolution"/>
+            <Column fieldName="Length"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+      <Page type="table" tableName="vote" numberByDataSource="0" fileName="vote" caption="Vote" shortCaption="Vote" allowAddMultipleRecords="false" addSeparator="false" horizontalFilterCondition="" recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false">
+        <BeforeGridText/>
+        <DetailedDescription/>
+        <ColumnPresentations>
+          <ColumnPresentation fieldName="Link" caption="Link" showColumnFilter="false" selectedFilterOperators="1589247">
+            <Lookup tableName="post" linkFieldName="Link" displayFieldName="Caption" lookupFilter="" useLookupOrdering="true" lookupOrdering="0"/>
+            <ViewProperties type="text" maxLength="75"/>
+            <EditProperties type="comboBox"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="Name" caption="Name" showColumnFilter="false" selectedFilterOperators="1589247">
+            <ViewProperties type="text"/>
+            <EditProperties type="textBox" maxLength="16"/>
+          </ColumnPresentation>
+          <ColumnPresentation fieldName="ID" caption="ID" showColumnFilter="false" selectedFilterOperators="1573119">
+            <ViewProperties type="text">
+              <Format type="number" thousandSeparator=","/>
+            </ViewProperties>
+            <EditProperties type="textBox" maxLength="0"/>
+          </ColumnPresentation>
+        </ColumnPresentations>
+        <Columns>
+          <List>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </List>
+          <View>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </View>
+          <Edit>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Edit>
+          <Insert>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Insert>
+          <QuickFilter>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </QuickFilter>
+          <FilterBuilder>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </FilterBuilder>
+          <Print>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Print>
+          <Export>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Export>
+          <Compare>
+            <Column fieldName="Link"/>
+            <Column fieldName="Name"/>
+            <Column fieldName="ID"/>
+          </Compare>
+          <MultiEdit>
+            <Column fieldName="Link" visible="false"/>
+            <Column fieldName="Name" visible="false"/>
+            <Column fieldName="ID" visible="false"/>
+          </MultiEdit>
+        </Columns>
+        <Details/>
+        <RecordPermissions useRecordPermissions="false"/>
+        <PartitionNavigators/>
+      </Page>
+    </Pages>
+    <UserAuthorization/>
+    <UserGrants/>
+    <Header/>
+    <Footer/>
+    <PHPOptions/>
+    <Groups>
+      <Group caption="No group"/>
+    </Groups>
+    <outgoingMailSettings mailer="0" fromEmail="" fromName=""/>
+  </Presentation>
+  <UserCSS/>
+  <PdfUserStyles/>
+  <PrintUserStyles/>
+  <UserJS/>
+  <ExcludedPaths/>
+  <DefaultPageProperties recordsPerPage="20" NavigatorPosition="3" insertAbilityMode="1" multiEditAbility="0" quickEditAbility="3" deleteAbilityMode="3" contentEncoding="UTF-8" sortingByDialogAvailable="false" exportAllRecordsAvailable="0" exportSelectedRecordsAvailable="0" exportSingleRecordFromGridAvailable="0" exportRecordFromViewFormAvailable="0" printAvailable="0" filterBuilderAvailable="false" useActionImages="true" showKeyColumnsImagesInGridHeader="false" runtimeCustomizationAvailable="false" recordsComparisionAvailable="false" columnFilterAvailable="false"/>
+  <DefaultDataFormats numberAfterDecimal="4" DecimalSeparator="." ThousandSeparator="," DateTimeFormat="Y-m-d H:i:s" DateFormat="Y-m-d" firstDayOfWeek="0"/>
+</Project>
